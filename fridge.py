@@ -4,7 +4,7 @@ from decimal import Decimal
 
 def add(items, title, amount, expiration_date=None):
     features_str = ('amount', 'expiration_date')
-    if expiration_date is None:
+    if expiration_date is not None:
         some_list = str.split(expiration_date, '-')
         date_ = date(int(some_list[0]), int(some_list[1]), int(some_list[2]))
     else:
